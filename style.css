@@ -1,0 +1,236 @@
+/* تنظیمات کلی و فونت */
+body {
+    font-family: 'Vazirmatn', sans-serif;
+    margin: 0;
+    background-color: #F5FDF7; /* پس‌زمینه سبز بسیار روشن */
+    color: #333;
+    text-align: right;
+    direction: rtl;
+    line-height: 1.6;
+}
+
+/* هدر اصلی صفحه با تم سبز و طلایی */
+header {
+    background: #0A5C36; /* سبز تیره */
+    color: #FFFFFF;
+    padding: 2rem 1rem;
+    text-align: center;
+    border-bottom: 4px solid #D4AF37; /* نوار طلایی */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+header p {
+    margin: 0.5rem 0 0;
+    font-size: 1.1rem;
+    color: #E6E6E6;
+}
+
+/* کانتینر اصلی */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+/* استایل فرم‌ها و ورودی‌ها (برای App.html) */
+form {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+input[type="file"],
+select {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border: 1px solid #D0D0D0;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Vazirmatn', sans-serif;
+    background-color: #F9FAFB;
+    color: #333;
+}
+
+input[type="file"]:focus,
+select:focus {
+    outline: none;
+    border-color: #D4AF37; /* طلایی */
+    box-shadow: 0 0 5px rgba(212, 175, 55, 0.3);
+}
+
+/* استایل دکمه‌ها */
+button {
+    background-color: #0A5C36; /* سبز تیره */
+    color: #FFFFFF;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 0.5rem;
+}
+
+button:hover {
+    background-color: #0D7245; /* سبز کمی روشن‌تر */
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* بلوک هر بخش قرعه‌کشی */
+.raffle-section {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 2rem;
+    overflow: hidden;
+    border: 1px solid #E0E0E0;
+}
+
+/* عنوان هر بخش */
+.raffle-section h2 {
+    background-color: #F9FAFB;
+    color: #0A5C36; /* سبز تیره */
+    padding: 1rem 1.5rem;
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 500;
+    border-bottom: 1px solid #E6E6E6;
+    display: flex;
+    align-items: center;
+}
+
+.raffle-section h2 svg {
+    margin-left: 10px;
+    color: #D4AF37; /* طلایی */
+}
+
+/* کانتینر جدول */
+.table-container {
+    overflow-x: auto;
+    padding: 1rem;
+}
+
+/* استایل اصلی جدول */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th, td {
+    padding: 0.9rem 1rem;
+    border-bottom: 1px solid #F0F0F0;
+}
+
+/* استایل هدر جدول */
+thead {
+    background-color: #F9FAFB;
+}
+
+th {
+    font-weight: 500;
+    color: #B8860B; /* طلایی تیره */
+    font-size: 0.95rem;
+}
+
+/* استایل سطرهای جدول */
+tbody tr {
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr:hover {
+    background-color: #F0FFF8; /* سبز بسیار ملایم */
+    transform: scale(1.005);
+}
+
+td {
+    color: #3F3F3F;
+    font-size: 0.95rem;
+    font-weight: 400;
+}
+
+/* استایل خاص برای شماره موبایل */
+.mobile-number {
+    direction: ltr;
+    display: inline-block;
+    font-weight: 500;
+    color: #0A5C36;
+    background-color: #E6F4EC;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+/* پیام برای جدول خالی */
+.empty-table {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: #888;
+    font-size: 1rem;
+}
+
+/* پاسخگویی به صفحه‌نمایش‌های کوچک */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    main {
+        padding: 0 1rem;
+    }
+
+    .raffle-section h2 {
+        font-size: 1.2rem;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    th, td {
+        padding: 0.6rem 0.8rem;
+    }
+
+    button {
+        width: 100%;
+        padding: 0.7rem;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 1.5rem 0.8rem;
+    }
+
+    .raffle-section {
+        margin-bottom: 1.5rem;
+    }
+
+    .table-container {
+        padding: 0.5rem;
+    }
+}
